@@ -30,5 +30,5 @@ public class SpeedConvertor {
     public static void main(String args[]){
         SpeedConvertor.printConversion(10.5);
     }
-
+}
 
