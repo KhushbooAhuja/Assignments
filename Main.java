@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package udemyassignmnet.Composition;
+package udemyassignmnet.poolAres;
 
 /**
  *
@@ -11,25 +11,18 @@ package udemyassignmnet.Composition;
  */
 public class Main {
     public static void main(String[] args) {
-        //creating 4 walls
-        Wall wall1 = new Wall("West");//here we created an object from Wall class and passed the direction parameter
-        Wall wall2 = new Wall("East");//here we created an object from Wall class and passed the direction parameter
-        Wall wall3 = new Wall("South");//here we created an object from Wall class and passed the direction parameter
-        Wall wall4 = new Wall("North");//here we created an object from Wall class and passed the direction parameter
- 
-        //creating ceiling
-        Ceiling ceiling = new Ceiling(12,55);
-        //creating bed
-        Bed bed = new Bed("Modern",4,3,2,1);
-        //creating lamp
-        Lamp lamp = new Lamp("Classic",false,75);
- 
-        //creating bedroom by passing all these objects as parameters
-        Bedroom bedroom = new Bedroom("Rakesh",wall1,wall2,wall3,wall4,ceiling,bed,lamp);
- 
-        //testing methods in Bedroom Class
-        bedroom.makeBed();
-        bedroom.getLamp().turnOn();
- 
+       
+        Rectangle rectangle = new Rectangle(5, 10);
+        System.out.println("rectangle.width= " + rectangle.getWidth());
+        System.out.println("rectangle.length= " + rectangle.getLength());
+        System.out.println("rectangle.area= " + rectangle.getArea());
+       
+        Cuboid cuboid = new Cuboid(5,10,5);
+        System.out.println("cuboid.width= " + cuboid.getWidth());
+        System.out.println("cuboid.length= " + cuboid.getLength());
+        System.out.println("cuboid.area= " + cuboid.getArea());
+        System.out.println("cuboid.height= " + cuboid.getHeight());
+        System.out.println("cuboid.volume= " + cuboid.getVolume());
+  
     }
 }
