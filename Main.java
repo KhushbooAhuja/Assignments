@@ -3,24 +3,43 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package udemyassignmnet.CircleCylinder;
+package udemyassignmnet.CarpetFloor;
 
 /**
  *
  * @author khusboo
  */
+import java.util.Scanner;
+ 
 public class Main {
+ 
     public static void main(String[] args) {
  
-        Circle circle = new Circle(3.75);
-        System.out.println("circle.radius= " + circle.getRadius());
-        System.out.println("circle.area= " + circle.getArea());
+        Scanner scannerObject = new Scanner(System.in);
  
-        Cylinder cylinder = new Cylinder(5.55, 7.25);
-        System.out.println("cylinder.radius= " + cylinder.getRadius());
-        System.out.println("cylinder.height= " + cylinder.getHeight());
-        System.out.println("cylinder.area= " + cylinder.getArea());
-        System.out.println("cylinder.volume= " + cylinder.getVolume());
+        System.out.println("Floor dimensions: ");
+        System.out.print("Length: ");
+        double floorLengthParameter = scannerObject.nextDouble();
+        System.out.print("Width: ");
+        double floorWidthParameter = scannerObject.nextDouble();
+ 
+        Floor floorObject = new Floor(floorWidthParameter, floorLengthParameter);
+ 
+        System.out.println();
+ 
+        System.out.print("Desired carpet price: $");
+        double carpetCostParameter = scannerObject.nextDouble();
+ 
+        Carpet carpetObject = new Carpet(carpetCostParameter);
+ 
+        System.out.println();
+ 
+        Calculator calculatorObject = new Calculator(floorObject, carpetObject);
+        System.out.println("Total carpeting price: $" + String.format("%.2f", calculatorObject.getTotalCost()));
+ 
+        scannerObject.close();
  
     }
+ 
 }
+
